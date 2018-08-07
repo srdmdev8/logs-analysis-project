@@ -1,0 +1,67 @@
+Authors - 4
+
+name - text
+bio - text
+id - integer - primary key
+
+
+Articles
+
+author - integer - foreign key (reference authors.id)
+title - text
+slug - text
+lead - text
+body - text
+time - timestamp with time zone
+id - integer - primary key
+
+
+Log
+
+path - text
+ip - inet
+method - text
+status - text
+time - timestamp with time zone
+id - integer - primary key
+
+
+
+
+4 articles by author # 1
+
+2 articles by author # 2
+
+1 article each by authors # 3 and # 4
+
+
+
+Q1: Most popular articles.....select articles.title, count(log.path) from log join articles on log.path = articles.slug group by articles.title order by count(path) desc limit 3;
+
+- hint: just join the log.path with articles.slug and use concat() to add /article/ to the slug
+
+	- used: update articles set slug = concat('/article/', slug);
+
+Q2: Most popular authors.....select authors.name, articles.title from authors join articles on authors.id = articles.author join log on log.path = articles.slug group by authors.name, articles.title order by count(path) desc limit 3;
+
+Q3: On which days did more than 1% of requests lead to errors
+
+	- select date(time) as day, count(*) as requests, (select count(status) as errors from log where status != '200 OK') from log group by day order by errors desc;  <-- very close, but need to figure out how to get my errors to work with the "order by day" piece and then get the percentage
+
+- 12908 total errors
+
+
+
+<!-- popular authors content will go here -->
+    <form method=get>
+      <h3>Most Popular Article Authors:</h3>
+      <p method=get id="author" name="author"></p>
+    </form>
+    <!-- errors content will go here -->
+    <form method=get>
+      <h3>Days Where More Than 1% of Requests Lead to Errors:</h3>
+      <p id="error" name="error"></p>
+    </form>
+
+authors = "".join(AUTHORS % popular_authors())
+error = "".join(ERRORS % errors())
