@@ -10,7 +10,10 @@ This application analyses data in the news database and return the following inf
 
 Installation and Setup
 -------------------------------------------------------------------------
-First, you will need to install Git on your computer in order to run this program on your local host.
+First, you will need to install Python on your computer:
+- Go to [Python.org](https://www.python.org/downloads/) and install Python (we are running version 2.7.14)
+
+Then, you will need to install Git in order to run this program on your local host.
 - Go to [Git's website](https://git-scm.com/downloads) and install Git (we are running version 2.18.0)
 
 Next, you will need to install Vagrant and VirtualBox.
@@ -24,7 +27,7 @@ Now, you need to configure the VirtualMachine (VM):
 - Save the ZIP file in desired location on your computer
 - Unzip/extract all files
 - Open the command prompt using Git or Git Bash
-- Navigate to the vagrant subdirectory within the fullstack-nanodegree-vm folder
+- Navigate to the **vagrant** subdirectory within the *fullstack-nanodegree-vm* folder
 - Run the command `vagrant up`
 - Once the vagrant up process completes, run `vagrant ssh`
 
@@ -34,12 +37,12 @@ Next, you need to download the logs analysis program:
 - Download the program's ZIP file [here](https://github.com/srdmdev8/logs-analysis-project)
   - Select **Clone or download**
   - Then select **Download ZIP**
-- Save the ZIP file in the vagrant subdirectory within the fullstack-nanodegree-vm folder
+- Save the ZIP file in the **vagrant** subdirectory within the *fullstack-nanodegree-vm* folder
 - Unzip/extract all files
 
 Lastly, we need to download and load the database the program will be analyzing:
 - Download the database [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
-- Put the **newsdata.sql** file into the vagrant subdirectory within the fullstack-nanodegree-vm folder
+- Put the **newsdata.sql** file into the *vagrant* subdirectory within the *fullstack-nanodegree-vm* folder
 - Then go back to your command prompt and `cd` into your **/vagrant** directory
 - Then run the command `psql -d news -f newsdata.sql`
 
@@ -47,7 +50,7 @@ Once this process completes, the database has been loaded.
 
 Running the Program
 -------------------------------------------------------------------------
-Ensure that you still logged into your VM and are in the **/vagrant** directory in the Git or
+Ensure that you are still logged into your VM and are in the **/vagrant** directory in the Git or
 Git Bash command prompt, then:
 - `cd` into the **news** directory
 - Run the command `python news.py`
