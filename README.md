@@ -55,6 +55,6 @@ Git Bash command prompt, then:
 - `cd` into the **news** directory
 - Run the command `python news.py`
 - Once your local host is running successfully:
- - Open a web browser and enter **localhost:8000** in the URL field and press enter
+  - Open a web browser and enter **localhost:8000** in the URL field and press enter
 
 Thank you for checking out my Logs Analysis Project!
