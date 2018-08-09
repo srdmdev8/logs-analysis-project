@@ -1,43 +1,54 @@
-FSWD Logs Analysis Project
-=========================================================================
+# FSWD Logs Analysis Project
 
-App Overview
--------------------------------------------------------------------------
-This application analyses data in the news database and return the following information:
+
+## App Overview
+This project sets up a PostgreSQL database for a fictional news website. The
+provided Python script uses the psycopg2 library to query the news database and
+produce a report that returns the following information:
 - Top 3 Most Popular Articles
 - Most Popular Article Authors
 - Days Where More Than 1% of Requests Lead to Errors
 
-Installation and Setup
--------------------------------------------------------------------------
+## Installation and Setup
 First, you will need to install Python on your computer:
-- Go to [Python.org](https://www.python.org/downloads/) and install Python (we are running version 2.7.14)
+- Go to [Python.org](https://www.python.org/downloads/) and install Python (we
+  are running version 2.7.14)
 
-Then, you will need to install Git in order to run this program on your local host.
-- Go to [Git's website](https://git-scm.com/downloads) and install Git (we are running version 2.18.0)
+Then, you will need to install Git in order to run this program on your local
+host.
+- Go to [Git's website](https://git-scm.com/downloads) and install Git (we are
+  running version 2.18.0)
 
 Next, you will need to install Vagrant and VirtualBox.
-- For Vagrant, go to [Vagrantup.com](https://www.vagrantup.com/downloads.html) (we are running version 2.1.2)
-- For the VirtualBox, go to [Virtualbox.org](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) (we are running version 5.1.38)
+- For Vagrant, go to [Vagrantup.com](https://www.vagrantup.com/downloads.html)
+(we are running version 2.1.2)
+- For the VirtualBox, go to [Virtualbox.org](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) (we
+  are running version 5.1.38)
 
 Now, you need to configure the VirtualMachine (VM):
-- Download the ZIP file [here](https://github.com/udacity/fullstack-nanodegree-vm)
+- Download the ZIP file
+[here](https://github.com/udacity/fullstack-nanodegree-vm)
   - Select **Clone or download**
   - Then select **Download ZIP**
 - Save the ZIP file in desired location on your computer
 - Unzip/extract all files
 - Open the command prompt using Git or Git Bash
-- Navigate to the **vagrant** subdirectory within the *fullstack-nanodegree-vm* folder
+- Navigate to the **vagrant** subdirectory within the *fullstack-nanodegree-vm*
+folder
 - Run the command `vagrant up`
 - Once the vagrant up process completes, run `vagrant ssh`
 
-If you get a shell prompt that starts with the word **vagrant**, you have successfully logged into your VM! *Keep your command prompt open as we will be coming back to it later.*
+If you get a shell prompt that starts with the word **vagrant**, you have
+successfully logged into your VM! *Keep your command prompt open as we will be
+coming back to it later.*
 
 Next, you need to download the logs analysis program:
-- Download the program's ZIP file [here](https://github.com/srdmdev8/logs-analysis-project)
+- Download the program's ZIP file
+[here](https://github.com/srdmdev8/logs-analysis-project)
   - Select **Clone or download**
   - Then select **Download ZIP**
-- Save the ZIP file in the **vagrant** subdirectory within the *fullstack-nanodegree-vm* folder
+- Save the ZIP file in the **vagrant** subdirectory within the
+*fullstack-nanodegree-vm* folder
 - Unzip/extract all files
 
 Lastly, we need to download and load the database the program will be analyzing:
@@ -48,13 +59,14 @@ Lastly, we need to download and load the database the program will be analyzing:
 
 Once this process completes, the database has been loaded.
 
-Running the Program
--------------------------------------------------------------------------
-Ensure that you are still logged into your VM and are in the **/vagrant** directory in the Git or
+## Running the Program
+Ensure that you are still logged into your VM and are in the **/vagrant**
+directory in the Git or
 Git Bash command prompt, then:
 - `cd` into the **news** directory
 - Run the command `python news.py`
 - Once your local host is running successfully:
-  - Open a web browser and enter **localhost:8000** in the URL field and press enter
+  - Open a web browser and enter **localhost:8000** in the URL field and press
+  enter
 
 Thank you for checking out my Logs Analysis Project!
