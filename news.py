@@ -42,11 +42,11 @@ QUERIES = '''\
 
 @app.route('/', methods=['GET'])
 def main():
-  '''Main page of the news site.'''
-  queries = "".join(QUERIES % str(logs_analysis_queries()))
-  html = HTML_WRAP % queries
-  return html
+    '''Main page of the news site.'''
+    queries = "".join(QUERIES % str(logs_analysis_queries()))
+    html = HTML_WRAP % queries
+    return html
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=8000)
